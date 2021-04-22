@@ -26,13 +26,13 @@ const Navbar = () => {
           <div className={classes.Line3} />
         </div>
         <Link to="/" className={classes.Link}>
-          <h3>Logo</h3>
+          <h1>Logo</h1>
         </Link>
         <ul className={[classes.NavLinks, navActive].join(' ')}>
           <Link to="/" className={classes.Link}>
             <li>Home</li>
           </Link>
-          <Link to="/shop" className={classes.Link}>
+          <Link to="/products" className={classes.Link}>
             <li>Products</li>
           </Link>
           <Link to="/about" className={classes.Link}>

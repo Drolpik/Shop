@@ -4,9 +4,14 @@
   overflow-x: hidden;
 
   .Link {
-    color: $navbar-font-color;
+    color: $dark-font-color;
     text-decoration: none;
     list-style: none;
+    font-weight: 500;
+
+    &:hover {
+      color: $nav-link-hover-color;
+    }
   }
 
   nav {
@@ -15,9 +20,10 @@
     align-items: center;
     height: 10vh;
     background-color: $nav-bg-color;
-    color: $navbar-font-color;
+    color: $dark-font-color;
+    z-index: 1;
 
-    h3 {
+    h1 {
       text-transform: uppercase;
     }
 
@@ -29,7 +35,7 @@
         width: 25px;
         height: 3px;
         margin: 5px;
-        background-color: $navbar-font-color;
+        background-color: $dark-font-color;
         transition: all 0.3s ease;
       }
     }
@@ -60,7 +66,6 @@
         top: -17px;
         left: 9px;
         background-color: $cartCount-bg-color;
-        font-size: $navbar-font-color;
         padding: 3px 5px;
         border-radius: 50%;
         z-index: -1;
@@ -84,7 +89,7 @@
         left: 0;
         top: 10vh;
         height: 90vh;
-        background-color: $nav-bg-color;
+        background-color: $sideBar-bg-color;
         display: flex;
         flex-flow: column;
         align-items: center;
