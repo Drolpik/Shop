@@ -1,5 +1,9 @@
 @import '../../../style/variables.scss';
 
+body {
+  overflow: hidden;
+}
+
 .Intro {
   padding-top: 9em;
   display: flex;
@@ -53,6 +57,11 @@
       background: $light-intro-bg-color;
       outline: none;
       cursor: pointer;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        @include littleMoveUp;
+      }
     }
   }
 
@@ -62,7 +71,7 @@
     img {
       width: 60vw;
       max-width: 650px;
-      min-width: 350px;
+      min-width: 300px;
       margin-top: 2em;
     }
   }
@@ -86,18 +95,17 @@
   }
 
   @media screen and (max-width: 600px) {
-    .TopRightGradient {
-      display: none;
-    }
-
-    .BottomLeftGradient {
-      display: none;
-    }
-
     .IntroLeft {
       h1 {
         width: 100%;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  body {
+    overflow: visible;
+    overflow-x: hidden;
   }
 }

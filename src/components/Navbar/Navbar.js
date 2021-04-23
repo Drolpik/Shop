@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className={classes.Line2} />
           <div className={classes.Line3} />
         </div>
-        <Link to="/" className={classes.Link}>
+        <Link to="/" className={[classes.Link, classes.LogoLink].join(' ')}>
           <h1>Logo</h1>
         </Link>
         <ul className={[classes.NavLinks, navActive].join(' ')}>
@@ -42,12 +42,12 @@ const Navbar = () => {
 
         <div className={classes.NavCart}>
           <span>0</span>
-          <Link to="/cart" className={classes.Link}>
+          <Link to="/cart" className={[classes.Link, classes.CartLink].join(' ')}>
             <img src={cart} alt="cart" width="20" />
           </Link>
 
           <div className={classes.NavLogIn}>
-            <Link to="login" className={classes.Link}>
+            <Link to="login" className={[classes.Link, classes.LogInLink].join(' ')}>
               <li>Login</li>
             </Link>
           </div>

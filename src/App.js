@@ -1,13 +1,12 @@
 import './App.scss';
-import {
-  BrowserRouter as Router, Switch, Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import About from './components/Main/About/About';
 import Products from './components/Main/Products/Products';
 import Login from './components/Main/Login/Login';
 import Cart from './components/Main/Cart/Cart';
 import Home from './components/Main/Home/Home';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
         <header>
           <Navbar />
         </header>
-        <div className="BottomLeftGradient" />
         <main>
           <Switch>
             <Route path="/" exact component={Home} />
@@ -27,6 +25,9 @@ function App() {
             <Route path="/cart" component={Cart} />
           </Switch>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </Router>
   );

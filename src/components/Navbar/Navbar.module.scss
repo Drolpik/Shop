@@ -8,9 +8,30 @@
     text-decoration: none;
     list-style: none;
     font-weight: 500;
+    transition: transform 0.5s ease;
 
     &:hover {
       color: $nav-link-hover-color;
+      @include littleMoveUp;
+    }
+  }
+
+  .LogInLink {
+    &:hover {
+      color: $light-font-color;
+    }
+  }
+
+  .LogoLink {
+    &:hover {
+      color: $dark-font-color;
+      transform: none;
+    }
+  }
+
+  .CartLink {
+    &:hover {
+      transform: none;
     }
   }
 
