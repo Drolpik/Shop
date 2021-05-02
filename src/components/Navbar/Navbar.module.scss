@@ -36,6 +36,8 @@
   }
 
   nav {
+    width: 100%;
+    position: absolute;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -100,6 +102,7 @@
 
   @media screen and (max-width: 600px) {
     nav {
+      background-color: #ffffff;
       .Burger {
         display: block;
       }
@@ -120,6 +123,12 @@
 
       .NavActive {
         transform: translateX(0%);
+      }
+
+      .LogInLink {
+        &:hover {
+          color: $nav-link-hover-color;
+        }
       }
     }
   }
