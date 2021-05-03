@@ -6,7 +6,7 @@ const Home = () => (
   <div className={classes.Intro}>
     <div className={classes.IntroLeft}>
       <h1>Each purchase will be made with pleasure!</h1>
-      <p>The world’s most wide toly deployed real-time content recommendations. Check</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, adipisci ex.</p>
 
       <Link to="/products">
         <button type="button">Check products</button>

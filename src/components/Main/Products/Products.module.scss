@@ -1,0 +1,15 @@
+.Container {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  .ProductsContainer {
+    width: 80%;
+    height: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
