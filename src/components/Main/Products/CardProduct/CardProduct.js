@@ -5,7 +5,7 @@ const CardProduct = (props) => {
   const { item } = props;
 
   return (
-    <Link to={`/product/${item.id}`} style={{ textDecoration: 'none' }}>
+    <Link to={`/product/${item.id}`} style={{ textDecoration: 'none', color: '#241b57' }}>
       <div className={classes.Container}>
         <img src={item.photo} alt="smartwatch" />
         <h2>{item.name}</h2>

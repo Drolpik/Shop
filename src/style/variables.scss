@@ -15,7 +15,17 @@ $second-top-gradient-bg-color: #ec4357;
 $dark-font-color: #241b57;
 $light-font-color: #ffffff;
 
+// Products Details
+$btn-addToCart-bg-color: #ec4357;
+
 @mixin littleMoveUp {
   transform: translateY(-10%);
   transition: transform 0.5s ease;
+}
+
+@mixin box {
+  width: 85%;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 50px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
 }
