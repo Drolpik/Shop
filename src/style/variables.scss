@@ -17,6 +17,7 @@ $light-font-color: #ffffff;
 
 // Products Details
 $btn-addToCart-bg-color: #ec4357;
+$evenRow-bg-color: #ec4357;
 
 @mixin littleMoveUp {
   transform: translateY(-10%);
@@ -28,4 +29,18 @@ $btn-addToCart-bg-color: #ec4357;
   background-color: #ffffff;
   box-shadow: 10px 10px 50px 2px rgba(0, 0, 0, 0.4);
   border-radius: 1rem;
+}
+
+@mixin underlineText($widthNum) {
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    content: '';
+    width: $widthNum;
+    height: 5px;
+    border-radius: 5px;
+    background: $btn-addToCart-bg-color;
+    opacity: 0.4;
+  }
 }
