@@ -1,10 +1,40 @@
+import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { NotificationManager } from 'react-notifications';
 import data from '../../../../data/data';
 import classes from './ProductDetails.module.scss';
+import { CartContext } from '../../../../context/CartContext';
 
 const ProductDetails = () => {
   const { _id } = useParams();
   const product = data.products.find((p) => p.id === Number(_id));
+
+  const cartContext = useContext(CartContext);
+  const { changeNumber } = cartContext;
+
+  const addToCart = () => {
+    const items = JSON.parse(localStorage.getItem('product') || '[]');
+    let inCart = false;
+
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].id === Number(_id)) {
+        inCart = true;
+        break;
+      }
+    }
+    if (!inCart) {
+      const item = {
+        id: Number(_id),
+        quantity: 1,
+      };
+
+      items.push(item);
+      changeNumber(1);
+    }
+
+    localStorage.setItem('product', JSON.stringify(items));
+    NotificationManager.success('Added to cart', '', 2500);
+  };
 
   return (
     <div className={classes.Container}>
@@ -20,7 +50,7 @@ const ProductDetails = () => {
             $
             {product.price}
           </p>
-          <button type="button">Add to cart</button>
+          <button type="button" onClick={addToCart}>Add to cart</button>
         </div>
       </div>
 

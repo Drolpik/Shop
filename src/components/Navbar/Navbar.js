@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Navbar.module.scss';
 import cart from '../../assets/cart.svg';
 import Backdrop from './Backdrop/Backdrop';
+import { CartContext } from '../../context/CartContext';
 
 const Navbar = () => {
   const [burger, switchBurger] = useState(false);
@@ -11,6 +12,9 @@ const Navbar = () => {
 
   const toggleBurgerClass = burger ? classes.Toggle : null;
   const navActive = burger ? classes.NavActive : null;
+
+  const cartContext = useContext(CartContext);
+  const { numOfProducts } = cartContext;
 
   return (
     <div className={classes.Container}>
@@ -41,7 +45,7 @@ const Navbar = () => {
         </ul>
 
         <div className={classes.NavCart}>
-          <span>0</span>
+          <span>{numOfProducts}</span>
           <Link to="/cart" className={[classes.Link, classes.CartLink].join(' ')}>
             <img src={cart} alt="cart" width="20" />
           </Link>
