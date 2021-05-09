@@ -1,4 +1,4 @@
-# Shop
+# Shop (IN PROGRESS)
 The application simulates the online store.
 ## Installation and Setup Instructions
 * Clone this repository
